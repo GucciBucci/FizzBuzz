@@ -1,13 +1,15 @@
 var usename;
-var button = document.getElementById("submit");
-button.onclick = Login;
+window.onload = console.log("Passed name: " +localStorage.getItem("userNameStorage"));
+// var button = document.getElementById("submit");
+// button.onclick = Login;
+window.onload = Login;
 var buttonInc = document.getElementById("inc");
 buttonInc.onclick = Increment;
 
 function Login()
 {
-    var name = document.getElementById("name").value;
-    usename = document.getElementById("name").value;
+    var name = localStorage.getItem("userNameStorage");
+    usename = localStorage.getItem("userNameStorage");
     login.innerHTML = name;
 
     get("http://basic-web.dev.avc.web.usf.edu/"+usename).then(function(response){
