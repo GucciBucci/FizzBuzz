@@ -1,0 +1,14 @@
+body
+{
+    background-color: bisque;
+    color: rosybrown;
+}
+
+#content
+{
+    background-color: cornsilk;
+    width: 1000px;
+    margin: 300 auto;
+    border: 4px brown dashed;
+    text-align: center;
+}
