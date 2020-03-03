@@ -1,16 +1,26 @@
-var usename;
-window.onload = console.log("Passed name: " +localStorage.getItem("userNameStorage"));
-// var button = document.getElementById("submit");
-// button.onclick = Login;
+window.onload = console.log("Passed name: "+sessionStorage.getItem("userNameStorage"));
 window.onload = Login;
+var usename;
 var buttonInc = document.getElementById("inc");
 buttonInc.onclick = Increment;
+var buttonLog = document.getElementById("relog");
+buttonLog.onclick = BackPage;
 
+//Takes user back to Login Page
+function BackPage()
+{
+    location.replace("login.html");
+}
+
+//Pulls username from Login page and changes the name on page
+//Gets the score from server
+//If User doesn't exist creates user and sets score to 0
 function Login()
 {
-    var name = localStorage.getItem("userNameStorage");
-    usename = localStorage.getItem("userNameStorage");
-    login.innerHTML = name;
+    var name = sessionStorage.getItem("userNameStorage");
+    usename = sessionStorage.getItem("userNameStorage");
+    var displayName = document.getElementById("uName");
+    displayName.innerHTML = name;
 
     get("http://basic-web.dev.avc.web.usf.edu/"+usename).then(function(response){
        if(response.status == 200){
@@ -31,6 +41,8 @@ function Login()
 
 }
 
+//Gets score for current user and increments them by 1
+//After Increment, new score is posted back to server
 function Increment() 
 {
     
@@ -68,6 +80,7 @@ function Increment()
 
 }
 
+//Determines the FizzBuzz Value output for display
 function FizzBuzzDisplay(num)
 {
     let fbString;

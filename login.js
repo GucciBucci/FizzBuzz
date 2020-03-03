@@ -12,7 +12,7 @@ function log()
     else
     {
         console.log("2" + page1Name + "2");
-        localStorage.setItem("userNameStorage", page1Name);
-        location.replace("test.html")
+        sessionStorage.setItem("userNameStorage", page1Name);
+        location.replace("test.html");
     }
 }
