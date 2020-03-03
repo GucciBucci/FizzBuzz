@@ -13,6 +13,6 @@ function log()
     {
         console.log("2" + page1Name + "2");
         sessionStorage.setItem("userNameStorage", page1Name);
-        location.replace("test.html");
+        location.replace("fizzbuzz.html");
     }
 }
