@@ -12,3 +12,29 @@ body
     border: 4px brown dashed;
     text-align: center;
 }
+
+h1
+{
+    font-size: 75px;
+}
+
+button
+{
+    background-color: burlywood;
+    color: blanchedalmond;
+    font-size: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+input
+{
+    background-color: burlywood;
+    color: blanchedalmond;
+    font-size: 40px;    
+}
+
+h3
+{
+    font-size: 50px;
+}
